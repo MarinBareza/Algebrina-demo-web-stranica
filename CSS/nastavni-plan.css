@@ -1,0 +1,478 @@
+:root {
+  --header-height: 8vh;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  margin: 0;
+  padding: 0;
+}
+
+/*HEADER*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100vw;
+  height: var(--header-height);
+  /* min-height: 50px; */
+
+  background-color: black;
+  box-shadow: 0 1px 2px black;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  height: 100%;
+  width: 100vw;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+
+.algebra-logo {
+  padding: 0 2rem;
+}
+
+.algebra-logo img {
+  height: 4vh;
+  width: auto;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1.3rem;
+  /* font-size: smaller; */
+}
+
+.header a:hover {
+  color: yellow;
+}
+
+/* CONTENT */
+.content {
+  padding: 0;
+  margin: var(--header-height) 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: auto;
+}
+
+h1 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  text-align: center;
+
+  margin-top: 0;
+  padding: 25px;
+  border-bottom: 3px solid rgb(206, 137, 10);
+
+  width: 30vw;
+
+  animation: slide-up 1s ease;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.content p {
+  width: 55vw;
+
+  margin: 4vh auto;
+
+  font-size: 1.95vh;
+  font-weight: 400;
+  line-height: 1.9rem;
+}
+
+.courses {
+  width: 100vw;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  margin-top: 5vh;
+
+  animation: slide-left 1s ease;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  width: 30vw;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.form label {
+  font-weight: 700;
+  font-size: 0.9rem;
+
+  margin: 1vh 0;
+}
+
+.form input {
+  padding: 0.4rem;
+  border: 2px solid rgba(173, 200, 230, 0.74);
+  border-radius: 3px;
+  box-shadow: 0 0 7px rgb(173, 216, 230);
+}
+
+/*TABLE*/
+.result {
+  width: 40vw;
+
+  /* visibility: hidden;
+  opacity: 0; */
+}
+
+table {
+  width: 100%;
+
+  text-align: left;
+  border-collapse: collapse;
+
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+table td {
+  box-sizing: border-box;
+  padding: 0.3rem;
+}
+
+table button {
+  background-color: rgb(200, 20, 73);
+  color: white;
+
+  height: 1.5rem;
+  width: auto;
+
+  border: none;
+  border-radius: 5px;
+}
+
+table button:hover {
+  cursor: pointer;
+}
+
+table tr:nth-child(2n + 1) {
+  background-color: rgba(153, 153, 153, 0.151);
+}
+
+tr {
+  height: 2.5rem;
+}
+
+tbody tr {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.384);
+}
+
+tbody tr td:first-child {
+  min-width: 20rem;
+}
+
+thead {
+  border-top: 1px solid rgba(128, 128, 128, 0.466);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.466);
+}
+
+thead tr th {
+  background-color: white;
+}
+
+tfoot {
+  font-weight: bold;
+
+  margin-top: 5px;
+  border-top: 2px solid black;
+}
+
+tfoot tr td {
+  background-color: white;
+}
+
+tfoot tr td:not(:first-child) {
+  color: rgb(196, 34, 55);
+  text-shadow: 0px 1px black;
+}
+
+/*FOOTER*/
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+
+  height: 15rem;
+  width: 100%;
+
+  margin-top: 0px;
+
+  background-image: url(/Resource/img/zaiskri-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px black;
+  text-align: center;
+
+  width: 60vw;
+  box-sizing: border-box;
+}
+
+.footer p span {
+  color: rgb(190, 28, 28);
+  text-shadow: 2px 1px black;
+}
+
+/*MODAL*/
+.modal-bg {
+  visibility: hidden;
+  opacity: 0;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.486);
+}
+
+.bg-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+form {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: white;
+
+  width: 30%;
+  min-width: 400px;
+  height: 470px;
+
+  padding: 15px;
+  border-radius: 5px;
+
+  font-size: 0.9rem;
+}
+
+form h1 {
+  animation: none;
+  border: none;
+
+  width: 100%;
+
+  font-size: 2rem;
+  font-weight: 500;
+  color: black;
+  text-shadow: none;
+  text-align: left;
+
+  margin: 0;
+  padding-bottom: 0.5rem;
+  padding: 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.39);
+}
+
+form label {
+  margin: 5px;
+}
+
+input,
+select,
+textarea {
+  padding: 0.4rem;
+  border: 1px solid rgba(128, 128, 128, 0.363);
+  border-radius: 3px;
+  /* box-shadow: 0 0 7px rgb(173, 216, 230); */
+}
+
+textarea {
+  height: 20%;
+}
+
+form .newsletter {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  margin: 5px 0;
+
+  font-size: smaller;
+}
+
+#chk-newsletter {
+  margin-top: 8px;
+}
+
+form .btns #btnSubmit {
+  background-color: rgb(56, 119, 170);
+  color: white;
+}
+
+form .btns #btnReset {
+  background-color: rgb(179, 37, 37);
+  color: white;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 769px) {
+  /*HTML*/
+  body {
+    width: 100%;
+  }
+
+  /*HEADER*/
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: initial;
+  }
+
+  .header-content {
+    flex-direction: column;
+  }
+
+  .algebra-logo {
+    margin-top: 15px;
+  }
+
+  /*CONTENT*/
+  h1 {
+    margin-top: 30px;
+  }
+
+  .courses {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form input {
+    margin-bottom: 100px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /*HEADER*/
+  .header {
+    height: unset;
+
+    background-color: rgb(0, 0, 0);
+    box-shadow: none;
+  }
+
+  .header-content {
+    flex-direction: column;
+  }
+
+  .algebra-logo {
+    padding: 1rem 2rem;
+  }
+
+  .links {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .links a {
+    box-sizing: border-box;
+    padding: 0.3rem;
+    font-size: 1rem;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+  /*CONTENT*/
+  h1 {
+    margin-top: 50px;
+    font-size: 1.5rem;
+  }
+
+  .courses {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form input {
+    margin-bottom: 100px;
+  }
+
+  .result {
+    width: 100%;
+  }
+
+  tbody tr td:first-child {
+    min-width: 10rem;
+  }
+
+  /*FOOTER*/
+  .footer p {
+    font-size: 2.7rem;
+  }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SUPIT - projektni zadatak</title>
+    <link rel="stylesheet" href="/CSS/novost-2.css" />
+    <script src="/Javascript/modal.js"></script>
+    <link
+      rel="shortcut icon"
+      href="/Resource/img/Algebra-logo.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-content">
+        <div class="algebra-logo">
+          <img src="/Resource/img/Algebra-logo.png" alt="algebra-logo" />
+        </div>
+        <div class="links">
+          <a href="/pocetna.html">Početna</a>
+          <a href="/about.html">O nama</a>
+          <a href="/novosti.html">Novosti</a>
+          <a href="/nastavni-plan.html">Nastavni plan</a>
+          <a href="#modal" class="modal-btn">Kontakt</a>
+        </div>
+      </div>
+    </div>
+    <div class="banner">
+      <p>
+        Nagrađujemo izvrsnost: Objavljujemo dobitnike stipendijskog natječaja
+        šk.god.2018./2019.!
+      </p>
+    </div>
+    <div class="content">
+      <h1>
+        Stipendijski natječaj šk.god.2018./2019.
+      </h1>
+      <p>
+        Nakon velikog broja prijava koje smo primili, detaljnom analizom i
+        provjerom utvrdili smo dobitnike ovogodišnjeg stipendijskog natječaja za
+        maturante! Stipendiju u vrijednosti od 10.000,00 kuna na potrošačkoj
+        kartici dobivaju: Heidi Sokolovski iz Zagreba - za najbolji rezultat iz
+        Matematike na A razini osvojila je stipendiju u iznosu od 10.000,00 kn.
+        Tereza Žugaj iz Zagreba - za najbolji rezultat iz Matematike na B razini
+        osvojila je stipendiju u iznosu od 10.000,00 kn. Dalija Romac iz Sinja -
+        za najbolji rezultat iz Hrvatskog jezika na A razini te dodatna 204 boda
+        za rezultat iz Matematike A i Engleskog jezika A osvojila je stipendiju
+        u iznosu od 10.000,00 kn. Ella Milinović iz Zagreba - za najbolji
+        rezultat iz Hrvatskog jezika na B razini osvojila je stipendiju u iznosu
+        od 10.000,00 kn. Borna Skračić iz Zadra – za najbolji rezultat iz
+        Engleskog jezika na A razini osvojio je stipendiju u iznosu od 10.000,00
+        kn. Lukas Božić iz Umaga - za najbolji rezultat iz Engleskog jezika na B
+        razini osvojio je stipendiju u iznosu od 10.000,00 kn.
+      </p>
+    </div>
+    <div class="footer">
+      <p>BUDI IZVRSTAN U ONOME ŠTO VOLIŠ <span>ZAISKRI</span></p>
+    </div>
+    <div class="modal-bg" id="modal-bg">
+      <form method="GET" action="http://www.fulek.com/VUA/SUPIT/ContactUs">
+        <h1>Kontaktirajte nas</h1>
+        <label for="txt-ime">Puno ime:</label>
+        <input
+          type="text"
+          id="txt-ime"
+          name="name"
+          autocomplete="on"
+          required
+        />
+        <label for="txt-e-mail">E-mail:</label>
+        <input type="email" id="txt-e-mail" name="email" required />
+        <label for="slct-vaznost-poruke">Vaznost poruke:</label>
+        <select id="slct-vaznost-poruke" name="importance" required>
+          <option value="Visoka">Visoka</option>
+          <option value="Niska">Niska</option>
+        </select>
+        <label for="txtarea-vasa-poruka">Vasa poruka:</label>
+        <textarea
+          id="txtarea-vasa-poruka"
+          cols="30"
+          rows="10"
+          name="message"
+          required
+        ></textarea>
+        <div class="newsletter">
+          <label for="chk-newsletter">Primaj newsletter:</label>
+          <input type="checkbox" id="chk-newsletter" name="newsletter" />
+        </div>
+        <div class="btns">
+          <input type="submit" id="btnSubmit" value="Posalji" />
+          <input type="reset" id="btnReset" value="Odustani" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

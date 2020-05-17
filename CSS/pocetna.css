@@ -1,0 +1,295 @@
+:root {
+  --header-height: 8vh;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*HEADER*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: var(--header-height);
+  min-height: 50px;
+
+  background-color: black;
+  box-shadow: 0 1px 2px black;
+}
+
+.header-content {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.algebra-logo {
+  padding: 0 2rem;
+}
+
+.algebra-logo img {
+  height: 4vh;
+  width: auto;
+  min-height: 30px;
+}
+
+.links {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  /* font-size: 1rem; */
+  padding: 1.3rem;
+}
+
+.header a:hover {
+  color: yellow;
+}
+
+/*CONTENT*/
+.content {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 3vw;
+  color: white;
+  text-shadow: 2px 1px black;
+
+  overflow: hidden;
+  white-space: nowrap;
+
+  border-right: 0.4em solid white;
+  margin: 0 auto;
+
+  animation: tipkanje 3.5s steps(50, end), blinkanje 0.65s step-end infinite;
+}
+
+h1 span {
+  color: rgb(190, 28, 28);
+  text-shadow: 2px 1px black;
+}
+
+@keyframes tipkanje {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 57vw;
+  }
+}
+
+@keyframes blinkanje {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+video {
+  position: fixed;
+  z-index: -1;
+}
+
+/*MODAL*/
+.modal-bg {
+  visibility: hidden;
+  opacity: 0;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.486);
+}
+
+.bg-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+form {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: white;
+
+  width: 30%;
+  min-width: 400px;
+  height: 470px;
+
+  padding: 15px;
+  border-radius: 5px;
+
+  font-size: 0.9rem;
+}
+
+form h1 {
+  animation: none;
+  border: none;
+
+  width: 100%;
+
+  font-size: 2rem;
+  font-weight: 500;
+  color: black;
+  text-shadow: none;
+
+  margin-bottom: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.39);
+}
+
+form label {
+  margin: 5px;
+}
+
+input,
+select,
+textarea {
+  padding: 0.4rem;
+  border: 1px solid rgba(128, 128, 128, 0.363);
+  border-radius: 3px;
+  /* box-shadow: 0 0 7px rgb(173, 216, 230); */
+}
+
+textarea {
+  height: 20%;
+}
+
+form .newsletter {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  margin: 5px 0;
+
+  font-size: smaller;
+}
+
+#chk-newsletter {
+  margin-top: 8px;
+}
+
+form .btns #btnSubmit {
+  background-color: rgb(56, 119, 170);
+  color: white;
+}
+
+form .btns #btnReset {
+  background-color: rgb(179, 37, 37);
+  color: white;
+}
+
+/*MEDIA QUERY*/
+@media (min-aspect-ratio: 16/9) {
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 769px) {
+  h1 {
+    font-size: 3.8vw;
+  }
+
+  @keyframes tipkanje {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 74vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    height: unset;
+
+    background-color: rgba(0, 0, 0, 0.856);
+    box-shadow: none;
+  }
+
+  .header-content {
+    flex-direction: column;
+  }
+
+  .algebra-logo {
+    padding: 1rem 2rem;
+  }
+
+  .links {
+    flex-direction: column;
+  }
+
+  .links a {
+    padding: 0.3rem;
+    font-size: 2vh;
+    width: 100vw;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 4.5vw;
+  }
+
+  @keyframes tipkanje {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 74vw;
+    }
+  }
+}

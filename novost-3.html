@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SUPIT - projektni zadatak</title>
+    <link rel="stylesheet" href="/CSS/novost-3.css" />
+    <script src="/Javascript/modal.js"></script>
+    <link
+      rel="shortcut icon"
+      href="/Resource/img/Algebra-logo.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-content">
+        <div class="algebra-logo">
+          <img src="/Resource/img/Algebra-logo.png" alt="algebra-logo" />
+        </div>
+        <div class="links">
+          <a href="/pocetna.html">Početna</a>
+          <a href="/about.html">O nama</a>
+          <a href="/novosti.html">Novosti</a>
+          <a href="/nastavni-plan.html">Nastavni plan</a>
+          <a href="#modal" class="modal-btn">Kontakt</a>
+        </div>
+      </div>
+    </div>
+    <div class="banner"></div>
+    <div class="content">
+      <h1>
+        Digitalno Junior ljeto
+      </h1>
+      <p>
+        Algebra Junior organizira edukativne i zabavne ljetne praznike za sve
+        osnovnoškolce! I ove smo godine pripremili digitalne radionice za djecu
+        čiji je fokus rješavanja raznih problema korištenjem tehnologije,
+        multimedije, digitalnog dizajna i komunikacija te stvaranju sadržaja u
+        svim multimedijskim i softverskim oblicima. Radionice se održavaju u
+        sklopu Digitalnog ljetnog kampa u Crikvenici i Digitalne ljetne škole u
+        Zagrebu kako bismo se družili, zabavljali i učili i na moru i na
+        kontinentu! Na digitalnom kampu i u školi provodit će se dva različita
+        programa koji su namijenjena djeci od 1. do 8. razreda. Ovisno o
+        odabranom terminu, polaznici će prolaziti kroz 1. ili 2. program, a u
+        slučaju pohađanja dvotjednih programa – oba. U prvom programu nađe
+        nindže uče biti glazbeni menadžeri dok su u drugom novinari i kreatori
+        informacija masovnih medija. Provjerite termine, cijene i lokacije škole
+        i kampa na sljedećem linku.
+      </p>
+    </div>
+    <div class="footer">
+      <p>BUDI IZVRSTAN U ONOME ŠTO VOLIŠ <span>ZAISKRI</span></p>
+    </div>
+    <div class="modal-bg" id="modal-bg">
+      <form method="GET" action="http://www.fulek.com/VUA/SUPIT/ContactUs">
+        <h1>Kontaktirajte nas</h1>
+        <label for="txt-ime">Puno ime:</label>
+        <input
+          type="text"
+          id="txt-ime"
+          name="name"
+          autocomplete="on"
+          required
+        />
+        <label for="txt-e-mail">E-mail:</label>
+        <input type="email" id="txt-e-mail" name="email" required />
+        <label for="slct-vaznost-poruke">Vaznost poruke:</label>
+        <select id="slct-vaznost-poruke" name="importance" required>
+          <option value="Visoka">Visoka</option>
+          <option value="Niska">Niska</option>
+        </select>
+        <label for="txtarea-vasa-poruka">Vasa poruka:</label>
+        <textarea
+          id="txtarea-vasa-poruka"
+          cols="30"
+          rows="10"
+          name="message"
+          required
+        ></textarea>
+        <div class="newsletter">
+          <label for="chk-newsletter">Primaj newsletter:</label>
+          <input type="checkbox" id="chk-newsletter" name="newsletter" />
+        </div>
+        <div class="btns">
+          <input type="submit" id="btnSubmit" value="Posalji" />
+          <input type="reset" id="btnReset" value="Odustani" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
